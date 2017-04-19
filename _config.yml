@@ -26,14 +26,14 @@ url: "https://eyalroz.github.io" # the base hostname & protocol for your site, e
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
-  Teaching: "teaching"
-  Publications: "publications"
-  Contact: "contact"
   Research:
     - On-GPU analytic query processing: "research/gpu_query_processing"
     - DBMS architecture in heterogeneous systems: "research/dbms_architecture_in_heterogeneous_systems"
     - Propety testing of dense structures: "research/property_testing_of_dense_structures"
+  Publications: "publications"
+  Teaching: "teaching"
+  About Me: "aboutme"
+  Contact: "contact"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
@@ -130,6 +130,11 @@ paginate: 5
 
 kramdown:
   input: GFM
+
+# BibTex Citation plugin
+#citation:
+#    citation_style: apa
+#    citation_locale: en
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
