@@ -31,6 +31,7 @@ navbar-links:
     - DBMS architecture in heterogeneous systems: "research/dbms_architecture_in_heterogeneous_systems"
     - Propety testing of dense structures: "research/property_testing_of_dense_structures"
   Publications: "publications"
+  Software: "software"
   Teaching: "teaching"
   About Me: "aboutme"
   Contact: "contact"
