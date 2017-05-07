@@ -26,8 +26,9 @@ Don't you get annoyed when, by mistake, you get a bunch of emails re-sent to you
 
 I've only gotten started with releasing pieces of the code I'm working on; but what I do release - I aim to be more widely applicable than just something you can plug into the rest of my code. So far I have:
 
-* A
-* Tools for automagically setting up benchmarking environments:
+* An on-GPU decompression library named [Giddy](https://github.com/eyalroz/libgiddy) for lightweight compression schemes, for use in a query processing engine or any other application with large amounts of compressible apriori-available data.
+* A modern-C++ wrapper [library](https://github.com/eyalroz/cuda-api-wrappers) for the [CUDA Runtime API](http://docs.nvidia.com/cuda/cuda-runtime-api/) --- making it (hopefully) more streamlined, elegant and dare I say simple to use.
+* Tools for automagically setting up (MonetDB) databases for benchmarking:
 
    * [tpch-tools](https://github.com/eyalroz/tpch-tools) using the [TPC-H](http://www.tpc.org/tpch/) benchmark
    * [usdt-ontime-tools](https://github.com/eyalroz/tpch-tools) using the US Department of Transport's [on-time flight data](https://www.transtats.bts.gov/ONTIME/)
