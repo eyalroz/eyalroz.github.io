@@ -1,0 +1,69 @@
+
+.PublicationAuthors a {
+	color: inherit;
+/*	font-weight: 550; */
+	text-decoration: underline;
+}
+
+.PublicationBookTitle a {
+	color: inherit;
+/*	font-weight: 550; */
+	text-decoration: underline;
+}
+
+.PublicationTitle a {
+	color: inherit;
+}
+
+.PublicationTitle {
+	font-weight: bold;
+	display: block;
+	padding: 2px 0px;
+
+}
+
+.PublicationBookTitle, .PublicationAuthors {
+	display: block;
+	font-size: 70%;
+}
+
+
+#publications li {
+	padding-bottom: 20px;
+}
+
+.PublicationPDFDocument {
+	background-image: url("/img/pdf.png");
+	height: 48px;
+	width: 48px;
+	background-size: 48px 48px;
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	margin-top: 3px;
+	margin-right: 8px;
+	margin-left: 8px;
+
+}
+
+.PublicationPDFDocument span {
+	display: none;
+}
+
+.PublicationWebDocument {
+	background-image: url("/img/web-document.png");
+	height: 48px;
+	width: 48px;
+	background-size: 48px 48px;
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	margin-top: 3px;
+	margin-right: 8px;
+
+}
+
+.PublicationWebDocument span {
+	display: none;
+}
+
