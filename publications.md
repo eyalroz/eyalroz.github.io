@@ -5,7 +5,7 @@ title: Publications
 
 **(This page is under construction...**)
 
-Before my publications are added here properly, you can find all of them on [my page on ResearchGate](https://www.researchgate.net/profile/Eyal_Rozenberg/contributions) (they are a bit annoying with the e-mail notifications but otherwise quite useful).
+Before my publications are added here properly, you can find all of them on [my page on ResearchGate](https://www.researchgate.net/profile/Eyal_Rozenberg/contributions).
 
 ---
 
