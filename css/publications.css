@@ -1,8 +1,8 @@
 
 .PublicationAuthors a {
 	color: inherit;
-/*	font-weight: 550; */
-	text-decoration: underline;
+/*	text-decoration: underline; */
+/*	font-style: italic; */
 }
 
 .PublicationBookTitle a {
@@ -11,7 +11,7 @@
 	text-decoration: underline;
 }
 
-.PublicationTitle a {
+a.PublicationTitle {
 	color: inherit;
 }
 
