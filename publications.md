@@ -3,11 +3,49 @@ layout: page
 title: Publications
 ---
 
-**(This page is under construction...**)
-
 Before my publications are added here properly, you can find all of them on [my page on ResearchGate](https://www.researchgate.net/profile/Eyal_Rozenberg/contributions).
 
 ---
+<h3>2019</h3>
+<ul class="Publications">
+
+<li class="Publication" typeof="foaf:Document" about="#arxiv-2019">
+<span class="PublicationAuthors">
+<a rel="dc:author" href="/">Eyal Rozenberg</a>:
+</span>
+<a class="PublicationPDFDocument" rel="rdfs:seeAlso" href="https://arxiv.org/pdf/1904.12217"><span>PDF</span></a>
+<a class="PublicationTitle" property="dc:title rdfs:label" href="https://arxiv.org/abs/1904.12217">A computational model for analytic column stores</a>
+<span class="PublicationBookTitle">Non-peer-reviewed pre-publication on <a href="https://arxiv.org">arXiv</a> (cs.DB).</span>
+</li>
+</ul>
+
+<h3>2018</h3>
+<ul class="Publications">
+
+<li class="Publication" typeof="foaf:Document" about="#adms-2018">
+<span class="PublicationAuthors">
+<a rel="dc:author" href="https://www.cwi.nl/people/diego-tome">Diego Tome</a> and <a rel="dc:author" href="https://www.cwi.nl/people/tim-gubner">Tim Gubner</a> and <a rel="dc:author" href="https://www.cwi.nl/people/mark-raasveldt">Mark Raasveldt</a> and <a rel="dc:author" href="/">Eyal Rozenberg</a> and <a rel="dc:author" href="http://homepages.cwi.nl/~boncz/">Peter Boncz</a>:
+</span>
+<a class="PublicationPDFDocument" rel="rdfs:seeAlso" href="http://adms-conf.org/2018-camera-ready/tome_groupby.pdf"><span>PDF</span></a>
+<a class="PublicationTitle" property="dc:title rdfs:label" href="https://www.researchgate.net/publication/326673651_Optimizing_Group-By_And_Aggregation_using_GPU-CPU_Co-Processing">Optimizing Group-By And Aggregation using GPU-CPU Co-Processing</a>
+<span class="PublicationBookTitle">34th IEEE International Conference on Data Engineering (<a href="http://icde2018.org/">ICDE 2018</a>), April 2018; Sources <a href="https://github.com/eyalroz/tpch_q1_on_gpu">available</a></span>.
+</li>
+</ul>
+
+
+<ul class="Publications">
+<li class="Publication" typeof="foaf:Document" about="#icde-2018">
+<span class="PublicationAuthors">
+<a rel="dc:author" href="/">Eyal Rozenberg</a>:
+</span>
+<a class="PublicationPDFDocument" rel="rdfs:seeAlso" href="https://www.researchgate.net/profile/Eyal_Rozenberg/publication/324521705_Decomposing_and_Re-Composing_Lightweight_Compression_Schemes_-_And_Why_It_Matters/links/5b79c52ea6fdcc5f8b55a1e1/Decomposing-and-Re-Composing-Lightweight-Compression-Schemes-And-Why-It-Matters.pdf"><span>PDF</span></a>
+<a class="PublicationTitle" property="dc:title rdfs:label" href="https://www.researchgate.net/publication/324521705_Decomposing_and_Re-Composing_Lightweight_Compression_Schemes_-_And_Why_It_Matters">Decomposing and Re-Composing Lightweight Compression Schemes-And Why It Matters</a>
+<span class="PublicationBookTitle">34th IEEE International Conference on Data Engineering (<a href="http://icde2018.org/">ICDE 2018</a>), April 2018</span>
+</li>
+
+</ul>
+
+
 
 <h3>2017</h3>
 <ul class="Publications">
