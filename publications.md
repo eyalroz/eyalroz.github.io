@@ -28,7 +28,9 @@ Before my publications are added here properly, you can find all of them on [my 
 </span>
 <a class="PublicationPDFDocument" rel="rdfs:seeAlso" href="http://adms-conf.org/2018-camera-ready/tome_groupby.pdf"><span>PDF</span></a>
 <a class="PublicationTitle" property="dc:title rdfs:label" href="https://www.researchgate.net/publication/326673651_Optimizing_Group-By_And_Aggregation_using_GPU-CPU_Co-Processing">Optimizing Group-By And Aggregation using GPU-CPU Co-Processing</a>
-<span class="PublicationBookTitle">34th IEEE International Conference on Data Engineering (<a href="http://icde2018.org/">ICDE 2018</a>), April 2018; Sources <a href="https://github.com/eyalroz/tpch_q1_on_gpu">available</a></span>.
+<span class="PublicationBookTitle">9th International Workshop on Accelerating Analytics and Data Management Systems Using Modern Processor and Storage Architecture(<a href="http://adms-conf.org/adms_2018.html">ADMS 2018</a>), August 2018>
+<br>
+(source code for result reproduction is <a href="https://github.com/diegomestre2/tpchQ01_GPU">available</a>; and see also https://<a href="github.com/eyalroz/tpch_q1_on_gpu">post-submission source code changes</a>).</span> 
 </li>
 </ul>
 
@@ -112,4 +114,3 @@ Before my publications are added here properly, you can find all of them on [my 
 <span class="PublicationBookTitle">International Workshop on Randomization and Computation, August 2007 (<a href="http://cui.unige.ch/tcs/random-approx/2007/index.php">RANDOM 2007</a>)</span>
 </li>
 </ul>
-

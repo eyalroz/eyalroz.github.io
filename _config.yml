@@ -32,7 +32,7 @@ navbar-links:
     - Propety testing of dense structures: "research/property_testing_of_dense_structures"
   Publications: "publications"
   Software: "software"
-  Teaching: "teaching"
+#  Teaching: "teaching"
   About Me: "aboutme"
   Contact: "contact"
 #  Resources:

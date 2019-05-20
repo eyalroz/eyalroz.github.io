@@ -5,7 +5,7 @@ title: Software
 
 I've written free software coming from two different 'angles': As my own personal spare-time project, and more recently as part of my research work.
 
-The first kind is a bit like scratching an itch: You're missing functionality on a system or in an application you're using, you find yourself repeating some tedious manual procedure, and at some point you just say "Fuck it, I'll just do it right once and for all". And then you spend a much-to-large amount of time working out all the corner cases, improving performance, adding feature you _don't_ need at all and you think are totally useless, but other users insist on having... so it takes on a life of its own.
+The first kind is a bit like scratching an itch: You're missing functionality on a system or in an application you're using, you find yourself repeating some tedious manual procedure, and at some point you just say "Fuck it, I'll just do it right once and for all". And then you spend a much-to-large amount of time working out all the corner cases, improving performance, adding features you _don't_ need at all and you think are totally useless, but other users insist on having... so it takes on a life of its own.
 
 ## Thunderbird extensions 
 
