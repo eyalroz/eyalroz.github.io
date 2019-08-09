@@ -5,8 +5,7 @@ title: Contact details
 
 Write me:
 
-* Office e-mail address: [`E.Rozenberg@cwi.nl`](mailto:E.Rozenberg@cwi.nl)
-* Personal e-mail adress: [`eyalroz@technion.ac.il`](mailto:eyalroz@technion.ac.il)
+* E-mail adress: [`eyalroz@alumni.technion.ac.il`](mailto:eyalroz@alumni.technion.ac.il)
 * My [PGP public key](https://pgp.mit.edu/pks/lookup?op=get&search=0x2D225D424EEFF81C) (from the [MIT keyserver](https://pgp.mit.edu/pks/)). Privacy [matters](https://www.pri.org/stories/2013-07-09/17-disturbing-things-snowden-has-taught-us-so-far)!
 * Physical mail address:
    * In the Netherlands:<br>*CWI, Science Park 123, Amsterdam 1098 XG, The Netherlands*<br> (Please indicate my name on the envelope clearly.)
