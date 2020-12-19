@@ -31,7 +31,10 @@ navbar-links:
     - DBMS architecture in heterogeneous systems: "research/dbms_architecture_in_heterogeneous_systems"
     - Propety testing of dense structures: "research/property_testing_of_dense_structures"
   Publications: "publications"
-  Software: "software"
+  Software: # "software"
+    - Thunderbird extensions: "software/thunderbird_extensions"
+    - DBMS analytic benchmark utilities: "software/benchmark_utils"
+    - CUDA and GPU analytics: "software/cuda_and_gpu_analytics"
 #  Teaching: "teaching"
   About Me: "aboutme"
   Contact: "contact"
@@ -55,20 +58,20 @@ avatar: "/img/avatar-icon.jpg"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Eyal Rozenberg
-  email: "eyalroz@technion.ac.il"
-  facebook: eyalroz  # eg. daattali
+  email: "eyalroz1@gmx.com"
+  #  facebook: eyalroz  # eg. daattali
   github: eyalroz    # eg. daattali
-  twitter: eyalroz   # eg. daattali
-  reddit: eyalroz    # eg. daattali
-  google-plus: +eyalroz   # eg. +DeanAttali or 109424658772469020925
+  #twitter: eyalroz   # eg. daattali
+  # reddit: eyalroz    # eg. daattali
+  # google-plus: +eyalroz   # eg. +DeanAttali or 109424658772469020925
   linkedin: eyalroz  # eg. daattali
-  xing: eyalroz      # eg. daattali
+  # xing: eyalroz      # eg. daattali
   stackoverflow: 1593077/einpoklum  # eg. "3943160/daattali"
-  snapchat: eyalroz  # eg. daattali
-  instagram: eyalroz # eg. daattali
-  youtube: users/eyalroz   # eg. user/daattali or channel/daattali
-  spotify: eyalroz   # eg. daattali
-  telephone: +31-6-41851074   # eg. +14159998888
+  # snapchat: eyalroz  # eg. daattali
+  # instagram: eyalroz # eg. daattali
+  # youtube: users/eyalroz   # eg. user/daattali or channel/daattali
+  # spotify: eyalroz   # eg. daattali
+  telephone: +972-53-7019130   # eg. +14159998888
 
 # Select which links to show in the footer
 footer-links-active:
@@ -123,7 +126,7 @@ title-separator: "-"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "Europe/Amsterdam"
+timezone: "Asia/Jerusalem"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
