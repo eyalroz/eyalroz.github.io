@@ -1,44 +1,46 @@
 ---
 layout: page
-title: Software
+title: Benchmark utilities
 ---
 
-I've written free software coming from two different 'angles': As my own personal spare-time project, and more recently as part of my research work.
+When you're studying or designing analytic query processing/DBMS engines, you're obviously interested in performance. This is a vague term, and especially so in this field, where there is so much variety of systems, settings and workloads. A natural --- and somewhat problematic --- tendency is to focus on concrete benchmarks: Combinations of query sets (or query distributions); data sets (or generators for them); and testing procedures. These allow some sort of quantitative comparison of different systems, and perhaps more importantly, are useful when working on improvements of the same system.
 
-The first kind is a bit like scratching an itch: You're missing functionality on a system or in an application you're using, you find yourself repeating some tedious manual procedure, and at some point you just say "Fuck it, I'll just do it right once and for all". And then you spend a much-to-large amount of time working out all the corner cases, improving performance, adding feature you _don't_ need at all and you think are totally useless, but other users insist on having... so it takes on a life of its own.
+My own limited work on analytic query processing involved two proper benchmarks, and and one data set which isn't a full-fledged benchmark, but has been rather popular in evaluating and showcasing systems. For each of these I ended up contributing some utility code, which either nobody had stepped up to write, or on the contrary --- many people had stepped up to write parts of, but no-one had integrated.
 
-## Thunderbird extensions 
+### [TPC-H dbgen](https://github.com/eyalroz/tpch-dbgen/) - Unified data set generator for the TPC-H benchmark
 
-The two prominent examples of the 'spare-time project' kind are my Thunderbird extensions. I'm a heavy user of email - receiving dozens a day, carefully auto-filtering them, and making sure I don't leave any unread (at worst I mark them unread if it's bulk I don't care for). Now, [Thunderbird](https://www.mozilla.org/thunderbird/) is not remotely the best mail client out there in many respects, but I used to use Netscape (which had a browser and a mail client combined) in the old days and the habit stuck. It's also multi-platform, relatively popular, based on a layout engine which pretty good support for Right-to-Left languages (my native language is Hebrew and I can also read Arabic with some effort), and - most importantly - it's very extension-friendly.
+[TPC-H](http://www.tpc.org/tpch/) is by far the most well-known and widely-used benchmark for analytical DBMSes. In fact, it is massively overused and misused, with some systems developed with only TPC-H performance in mind. It is not a large benchmark suite of benchmarks, and its queries are not too complex, helping its popularity. However, it is absolutely non-representative of any real-world usage scenario, for a plethora of reasons (for example, see the discussion here: [this](https://ir.cwi.nl/pub/27429/27429.pdf). Despite this fact, and its gaining in age, it remains popular.
 
-### [BiDi Mail UI](https://addons.mozilla.org/en-US/thunderbird/addon/bidi-mail-ui/) - BiDirectional language UI and other ehhancement
+TPC-H is published by the [Transaction Processing Council](http://www.tpc.org), a sort of industry consortium, also responsible for other important benchmarks; and its speficiation document is accompanied by a liberally-licensed utility for generating the data: `dbgen`.
 
-One extension was an initiative that two different people started simultaneously: Myself and [Asaf Romano](https://github.com/asaf-romano) were both frustrated by how Thunderbird was not exposing GUI for setting the direction of email messages you were reading - so that we were reading Hebrew email laid out the wrong way. Actually, there was an earlier extension which started addressing this problem, but most of the functionality was missing. So, both of us started improving it, and at some point we noticed each other's work, joined forces and merged our code. After that we added complex direction auto-detection, per-paragraph direction setting, correction of Mozilla's charset detection when it misses on right-to-left languages, etc. It's also important to mention additional [contributors](http://bidiui.mozdev.org/mail/credits.html) who, while not writing code for the most part, were instrumental in disseminating this work.
+Unfortunately, TPC is a sluggish bureacuracy of rivals, not a software development outfit, and thus - their `dbgen` utility is not high-quality portable software, and is riddled by many bugs and some functional deficiencies. Over the years, dozens - if not hundreds - of people have had to fix the specific issues manifesting on their own systems, creating custom versions of the utility. Even if we limit our focus to the brave souls who posted their code on GitHub, we have [(at least) 79 such repositores](https://github.com/eyalroz/tpch-dbgen/network/members).
 
-#Interestingly, this extension probably has many more users in the Arab countries and in Iran than in the much smaller Hebrew-speaking user base in Israel/Palestine - and it's been localized for those languages, and for less well-known-to-be-RTL languages - Urdu
+I took it upon myself to merge all of those forks, which had changes which were somehow applicable and useful to the general public. This was not a trivial feat, since different authors made conflicting changes, and would sometime break compatibility with one platform or configuration while making the utility suit their needs. At some point, I also realized it was time to have a proper build system generator, rather than manually edit a Makefile --- so I switched the repository to using CMake.
+
+### [TPC-H tools](https://github.com/eyalroz/tpch-tools/) - Tools for using the TPC-H benchmark with MonetDB
+
+To use a benchmark with a DBMS, it's not sufficient to just generate the test data. You need to work with the DBMS to set up a new DB, schemata, constraints, and then to load the data you created. Such work is not generic, but rather DBMS-specific; and this repository covers it for [MonetDB](https://www.monetdb.org/).
+
+MonetDB is a columnar, analytics-focused DBMS which serves as a baseline for a lot of research work has been, originated at [Database Architectures research group at CWI Amsterdam](https://www.cwi.nl/research/groups/database-architectures) (though now maintained and developed by a commercial spin-off which coexists with the research group). I had worked with MonetDB when I was at Toga Networks/Huawei, and then I joined the research group at Amsterdam, so I have a soft spot for it besides its technical virtues.
 
 
-### [Remove Duplicate Messages (Alternate)](https://addons.mozilla.org/addon/remove-duplicate-messages-alte/) - the sad consequence of non-free software
+### [SSB dbgen](https://github.com/eyalroz/ssb-dbgen/) - Unified data set generator for the SSB benchmark
 
-Don't you get annoyed when, by mistake, you get a bunch of emails re-sent to you? Or copy a folder with messages back into a folder which already has some of them? Well, I do. Now, there was already an extension for removing them, but alas - its license didn't allow for publishing modifications. So I had to blind-rewrite the whole damn thing! Luckily, I also made it a lot faster in the process and expanded the feature set, so it wasn't a complete waste of time. This one become an addons.mozilla.org recommended item for the message reading category, and by now has had over 100,000 users or so... my most popular piece of software to date.
+The "Star-Schema Benchmark", or SSB, is a somewhat-popular benchmark derived from TPC-H by researchers at the University of Massachsats Boston, rearranging the data tables into a [star schema](https://en.wikipedia.org/wiki/Star_schema) and authoring a different query set. Unlike the TPC-H, there is no organization backing this benchmark, and no official distribution of its data generation utility.
 
-## GPU & DBMS research-related
+Since SSB's data generation utility is a fork of TPC-H, it was relatively straightforward to give it the same treatment: Collect bug fixes, transition to CMake, identify additional sources of bugs, avoid warnings etc.
 
-I've only gotten started with releasing pieces of the code I'm working on; but what I do release - I aim to be more widely applicable than just something you can plug into the rest of my code. So far I have:
+### [SSB  tools](https://github.com/eyalroz/ssb-tools/) - Tools for using the SSB benchmark with MonetDB
 
-* An on-GPU decompression library named [Giddy](https://github.com/eyalroz/libgiddy) for lightweight compression schemes, for use in a query processing engine or any other application with large amounts of compressible apriori-available data.
-* A modern-C++ wrapper [library](https://github.com/eyalroz/cuda-api-wrappers) for the [CUDA Runtime API](http://docs.nvidia.com/cuda/cuda-runtime-api/) --- making it (hopefully) more streamlined, elegant and dare I say simple to use.
-* Tools for automagically setting up (MonetDB) databases for benchmarking:
+The SSB equivalent of #TPC-H-tools .
 
-   * [tpch-tools](https://github.com/eyalroz/tpch-tools) using the [TPC-H](http://www.tpc.org/tpch/) benchmark
-   * [usdt-ontime-tools](https://github.com/eyalroz/tpch-tools) using the US Department of Transport's [on-time flight data](https://www.transtats.bts.gov/ONTIME/)
-   * ... and I'm planning to do the same for the SSB (Star-Schema Benchmark) sometime after SIGMOD 2017. That should also include merging some of the [forks](https://github.com/electrum/ssb-dbgen/network) of the benchmark's data generation utility [ssb-dbgen](https://github.com/electrum/ssb-dbgen)
 
----
+### [USDT-Ontime tools](https://github.com/eyalroz/usdt-ontime-tools/) - Tools for using the USDT On-Time performance dataset with MonetDB
 
-I've also had the chance to work on some non-free software:
+Unlike TCP-H and SSB, there is no benchmark called "USDT Ontime". There is, however, a popular data set published by the United States Bureau of Transport Statistics: Data about domestic US flights, their schedules and actual arrivals, departures, delays and cancellations. This raw data is available as compressed monthly CSV file, for download over the Internet.
 
-* Contributed to an implementation of greedy string memoization scheme within Actian Vector
-* Worked on the back-end of Taboola's related-content recommendation engine
-* Co-wrote a proof-of-concept query processor using discrete (nVIDIA) GPUs as part of a heterogeneous computing group in Hua Wei Israel (a.k.a. Toga Networks). This underpinned our [paper](https://www.researchgate.net/publication/308887432_Overtaking_CPU_DBMSes_with_a_GPU_in_Whole-Query_Analytic_Processing_with_Parallelism-Friendly_Execution_Plan_Optimization) in ADMS 2016 on the subject. Unfortunately, the group has been disbanded and the execution engine's code is just lying in some drawer to rot. Another consequence of code being closed-source... which made me promise myself to avoid working on non-free software again as much as I could.
+Since data isn't generated here, this utility involves downloading, decompressing, parsing and loading in parts - with carefully-chosen schema field sizes.
+
+
+
 

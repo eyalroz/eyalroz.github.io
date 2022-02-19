@@ -17,8 +17,7 @@ baseurl: ""
 title: Eyal Rozenberg
 
 description: > # this means to ignore newlines until "baseurl:"
-  Eyal Rozenberg's personal page describing his professional work as a researcher
-  and a Free Software developer
+  Professional homepage of Eyal Rozenberg, software developer and computer science researcher
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://eyalroz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -32,9 +31,10 @@ navbar-links:
     - Propety testing of dense structures: "research/property_testing_of_dense_structures"
   Publications: "publications"
   Software: # "software"
+    - CUDA \& GPU programming: "software/cuda_and_gpu_programming"
     - Thunderbird extensions: "software/thunderbird_extensions"
-    - DBMS analytic benchmark utilities: "software/benchmark_utils"
-    - CUDA and GPU analytics: "software/cuda_and_gpu_analytics"
+    - A standalone printf library: "software/printf"
+    - Analytic DBMS benchmark utilities: "software/benchmark_utils"
 #  Teaching: "teaching"
   About Me: "aboutme"
   Contact: "contact"
